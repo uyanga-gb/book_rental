@@ -51,7 +51,7 @@
 				</tbody>
 			</table>
 			<p class="pull-right">Total: $49.96</p><br><br>
-			<input class="pull-right" type="submit" name="continue" value="Continue Shopping">
+			<a href='/products/index'><input class="pull-right" type="button" name="continue" value="Continue Shopping" /></a>
 		</form>
 	</div>
 	<div class="container">

@@ -12,6 +12,7 @@
 
 	</style>
 </head>
+<<<<<<< HEAD
 <body>
 	<nav class="nav navbar-inverse" role="navigation" id="nav">
 		<div class="nav navbar-collapse collapse navbar-nav navbar-left"><h3>Dojo eCommerce</h3></div>
@@ -20,5 +21,17 @@
 			</ul>
 		</div>
 	</nav>
+=======
+
+<body>
+<nav class="nav navbar-inverse" role="navigation" id="nav">
+	<div class="nav navbar-collapse collapse navbar-nav navbar-left"><h3>Dojo eCommerce</h3></div>
+		 <ul class="nav navbar-nav navbar-right">
+			<li><a href="/products/carts">Shopping Cart (5)</a></li>
+		</ul>
+	</div>
+
+</nav>
+>>>>>>> 64f0a33b2caf9e7a5175c119fec2db9f30856c9a
 </body>
 </html>
