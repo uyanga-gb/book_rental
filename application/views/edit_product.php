@@ -73,7 +73,7 @@
 			<td></td>
 		</table>
 		<table id="table-2">
-			<td><input type="submit" name="cancel" value="Cancel" style="background-color:white"></td>
+			<td><a href='/'><input type="submit" name="cancel" value="Cancel" style="background-color:white"></a></td>
 			<td><input type="submit" name="Preview" value="Preview" style="background-color:green"></td>
 			<td><input type="submit" name="Update" value="Update" style="background-color:blue; color:white"></td>
 		</table>

@@ -25,20 +25,15 @@
 </head>
 <body>
  	<div class="container">
- 		<div class="row col-md-12"><a href="#">Go Back</a></div>
+ 		<div class="row col-md-12"><a href="/products/category">Go Back</a></div>
  		<div class="row col-md-12"><h4>Product Name</h4></div>
  		<div class="row">
  			<div class="col-md-5">
  				<img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRkkcKZAKLOuc8V85Bf_QCi2OBvGn7Dy5HTEp5b5zZtAEVhMYP13w" class="img-responsive big" alt="Responsive image">
- 		
 	 			<img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRkkcKZAKLOuc8V85Bf_QCi2OBvGn7Dy5HTEp5b5zZtAEVhMYP13w" class="img-responsive small" alt="Responsive image">
-	 		
 	 			<img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRkkcKZAKLOuc8V85Bf_QCi2OBvGn7Dy5HTEp5b5zZtAEVhMYP13w" class="img-responsive small" alt="Responsive image">
-	 	
 	 			<img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRkkcKZAKLOuc8V85Bf_QCi2OBvGn7Dy5HTEp5b5zZtAEVhMYP13w" class="img-responsive small" alt="Responsive image">
-	 		
 	 			<img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRkkcKZAKLOuc8V85Bf_QCi2OBvGn7Dy5HTEp5b5zZtAEVhMYP13w" class="img-responsive small" alt="Responsive image">
-	 		
 	 			<img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRkkcKZAKLOuc8V85Bf_QCi2OBvGn7Dy5HTEp5b5zZtAEVhMYP13w" class="img-responsive small" alt="Responsive image">
 	 		</div>
  			<div class="col-md-6 col-md-offset-1">
@@ -54,7 +49,7 @@
 				</select>
 			</div>
 			<div class="col-md-2">
-				<form action="/Main/carts" method="post">
+				<form action="/products/buy" method="post">
 				<button class="btn btn-primary btn-xs">Buy</button>
 				</form>
 			</div>

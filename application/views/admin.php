@@ -24,7 +24,7 @@
  		<div class="row">
 			  <div class="col-md-offset-2 col-md-10"><h3>Admin Login Page</h3></div>
 		</div>
-		<form action="/Main/admin_dashboard" method="post">
+		<form action="/admin/orders" method="post">
 			<input type="hidden" name="login">
 			<div class="row">
 			 	<div class="col-md-offset-2 col-md-6">

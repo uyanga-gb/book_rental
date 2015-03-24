@@ -28,8 +28,8 @@
        		<div class="container">
 	       		<ul class="nav">
 		       		<li><a class="navbar-brand" href="#">Dashboard</a></li>
-				     <li><a class="nav navbar-nav" href="/main/admin_dashboard">Orders</a></li>
-				     <li><a class="nav navbar-nav" href="/main/products">Products</a></li>
+				     <li><a class="nav navbar-nav" href="orders">Orders</a></li>
+				     <li><a class="nav navbar-nav" href="products">Products</a></li>
 			    	<li><a class="nav navbar-nav pull-right" href="/main/signin">Log off</a></li>
 				</ul>
 			</div>
