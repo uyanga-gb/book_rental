@@ -12,6 +12,18 @@ class Main extends CI_Controller {
 	{
 		$this->load->view('admin_nav');
 	}
+	public function admin()
+	{
+		$this->load->view('admin');
+	}
+	public function admin_dashboard()
+	{
+		$this->load->view('admin_dashboard');
+	}
+	public function show()
+	{
+		$this->load->view('show');
+	}
+	
 }
-
-//end of main controller
+?>
