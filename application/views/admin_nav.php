@@ -6,7 +6,7 @@
    	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
   <style type="text/css">
 	.navbar {
-		border: 2px solid black;
+		border-bottom: 2px solid black;
 		background-color: #CB4E4E;
 	}
 	ul .nav {
@@ -14,6 +14,7 @@
 	}
 	li .navbar-brand {
 		color: white;
+		font-size: 24px;
 	}
 	ul li .nav {
 		color: white;

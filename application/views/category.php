@@ -4,6 +4,15 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
 		<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+<<<<<<< HEAD
+		<script type="text/javascript">
+			$(document).on('click','img',function(res){
+					$(this).attr('alt').trigger('/');
+				});
+			});
+		</script>
+=======
+>>>>>>> 64f0a33b2caf9e7a5175c119fec2db9f30856c9a
 		<style rel='stylesheet'>
 			.inner-addon {	position: relative; }	
 			.inner-addon .glyphicon {	
@@ -45,7 +54,11 @@
 			</div>
 			<div class='col-md-9 leftpad20'>
 				<form class='form-inline padding-top: 10px;'>
+<<<<<<< HEAD
+					<img src="http://cdn.sheknows.com/articles/2013/04/Puppy_2.jpg" alt='http://cdn.sheknows.com/articles/2013/04/Puppy_2.jpg'>
+=======
 					<a href='/products/show'><img src="http://cdn.sheknows.com/articles/2013/04/Puppy_2.jpg" alt='http://cdn.sheknows.com/articles/2013/04/Puppy_2.jpg'></a>
+>>>>>>> 64f0a33b2caf9e7a5175c119fec2db9f30856c9a
 					<img src="http://cdn.sheknows.com/articles/2013/04/Puppy_2.jpg" alt='http://cdn.sheknows.com/articles/2013/04/Puppy_2.jpg'>
 					<img src="http://cdn.sheknows.com/articles/2013/04/Puppy_2.jpg" alt='http://cdn.sheknows.com/articles/2013/04/Puppy_2.jpg'>
 					<img src="http://cdn.sheknows.com/articles/2013/04/Puppy_2.jpg" alt='http://cdn.sheknows.com/articles/2013/04/Puppy_2.jpg'>

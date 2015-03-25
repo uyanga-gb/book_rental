@@ -18,15 +18,6 @@ DROP SCHEMA IF EXISTS `ecommerce` ;
 CREATE SCHEMA IF NOT EXISTS `ecommerce` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci ;
 USE `ecommerce` ;
 
--- -----------------------------------------------------
--- Table `ecommerce`.`table1`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `ecommerce`.`table1` ;
-
-CREATE TABLE IF NOT EXISTS `ecommerce`.`table1` (
-)
-ENGINE = InnoDB;
-
 
 -- -----------------------------------------------------
 -- Table `ecommerce`.`category`
