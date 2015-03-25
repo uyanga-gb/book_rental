@@ -18,7 +18,7 @@
 			.inner-addon {	position: relative; }	
 			.inner-addon .glyphicon {	
 				position: absolute;
-				padding: 10px;
+				padding: 14px;
 			}	
 			.right-addon input {	
 				padding-right: 30px;
@@ -62,17 +62,19 @@
 					<label>Categories</label><br>
 						<?php 
 						foreach ($categories as $category) {?>
-							<a href='/products/index/<?=$category["category_id"]?>'><?= $category['category_name'] ?> (<?=$category['cat_count']?>)</a><br>
+							<a href='/products/category/<?=$category["category_id"]?>'><?= $category['category_name'] ?> (<?=$category['cat_count']?>)</a><br>
 						<?php }	?>
+						<a href='/products'>Show All</a>
 				</div>		
 			</div>
 			<div class='col-md-9 leftpad20'>
+				
 				<form class='form-inline padding-top: 10px;'>
-					
 					<?php foreach ($images as $image) {?>
+
 						<div class="col-md-4 col-md-offset-1">
+						<img src="<?=$image['imageid']?>" alt="<?=$image['imageid']?>">
 						<h4><?=$image['name']?></h4>
-						<img src="<?=$image['imageid']?>" alt='<?=$image['imageid']?>'>
 						<p><?=$image['price']?></p>
 						</div>
 					<?php }?>

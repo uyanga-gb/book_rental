@@ -11,10 +11,20 @@ class products extends CI_Controller {
 	public function index()
 	{
 		$categories=$this->models->category();
-		$images=$this->models->get_images($category_id);
-		$this->load->view('category', array('categories'=>$categories, 'images'=>$images));
+		$all_images=$this->models->all_images();
+		// $images=$this->models->get_images($category_id);
+		$this->load->view('category', array('categories'=>$categories, 'images'=>$all_images));
+		// $this->load->view('category', $categories);
 	}
-
+	public function category($category_id)
+	{
+		$categories=$this->models->category();
+		
+		$images=$this->models->get_images($category_id);
+        $this->load->view('category', array('categories'=>$categories, 'images'=>$images));
+		// $this->load->view('category', $images);
+		
+	}
 
 	
 	public function show(){
