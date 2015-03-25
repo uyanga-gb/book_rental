@@ -15,9 +15,10 @@ class admin extends CI_Controller {
 	public function validate()
 	{
 		$valid = $this->queries->checkuser();
-		if ($valid > 0){
+		if ($valid == TRUE){
 			$this->orders();
 		} else {
+			$this->session->set_flashdata('error', array('message' => 'Your email and password does not match information in the database. Try again.','class' => 'error'));
 			redirect('/');
 		}
 	}
@@ -36,7 +37,20 @@ class admin extends CI_Controller {
 		var_dump($results);die;
 		$this->load->view('dashboard/products', array('list'=>$results));		
 	}
-	public function edit_product(){
+	public function edit_product($product_id)
+	{
+		$categoryList = $this->queries->getCategories();
+		$productImage = $this->queries->getProductImages($product_id);
+		$productDetails = $this->queries->getProductDetails($product_id);
+		$this->load->view('edit_product', array('mode' => $product_id,
+												'categoryList' => $categoryList,
+												'productImage' => $productImage,
+												'productDetails' => $productDetails));
+	}
+	public function add_product()
+	{
+		$categoryList = $this->queries->getCategories();
+		$this->load->view('edit_product', array('categoryList'=>$categoryList));
 	}
 	public function delete_product($id)
 	{
@@ -50,7 +64,7 @@ class admin extends CI_Controller {
 	public function signin()
 	{
 		$this->session->sess_destroy();
-		$this->index();
+		redirect('/');
 	}
 }
 ?>

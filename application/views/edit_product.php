@@ -40,9 +40,14 @@
     </style>
 </head>
 <body>
-	<h2>Edit Product - ID 2</h2>
+	<?php
+		if(isset($mode)) { echo '<h2>Edit Product - ID'.$mode['id'].'</h2>'; }
+		else {	echo '<h2>Add Product - ID NEW</h2>'; }
+	?>
 	<span class="glyphicon glyphicon-remove pull-right" aria-hidden="true"></span>
-	<form action="#" id ="form1" method="post" runat="server">
+	<form action="#" id ="form1" method="post">
+		<!-- this is to display the details of the product -->
+		<?php foreach($productDetails as $key){?>
 		<table>
 			<td>Name</td>
 			<td><input class="input" type="text" name="name" value="Hat"></td>
@@ -53,12 +58,19 @@
 			<td>Categories</td>
 			<td>
 				<select name="categories">
-					<option value="shirt">Shirt</option>
+					<?php foreach($categoryList as $keyCategory) {
+						if($keyCategory['id'] == $key['category_id'] ){
+							echo '<option value="'.$keyCategory['id'].'" selected>'.$keyCategory['category_name'].'</option>';
+						else {
+							echo '<option value="'.$keyCategory['id'].'">'.$keyCategory['category_name'].'</option>';
+						}
+					}?>
 					<option value="hat">Hat</option>
 					<option value="mug">Mug</option>
 					<option value="pants">Pants</option>
 					<option value="key_chain">Key Chain</option>
 					<option value="belt">Belt</option>
+					<?= } ?>
 				</select>
 			</td>
 			<tr></tr>

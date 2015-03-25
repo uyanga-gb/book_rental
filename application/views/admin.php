@@ -17,14 +17,26 @@
 	input {
 		border: 2px
 	}
+	.error {
+		margin: 0 auto;
+		color: red;
+		font-style: italic;
+	}
   </style>
   </head>
  <body>
  	<div class="container">
+ 		<?php
+			if($this->session->flashdata('error')) {
+				$message = $this->session->flashdata('error'); ?>
+			<div class="<?= $message['class']?>"><?= $message['message']; ?></div>
+			<?php 
+			}
+			?>
  		<div class="row">
 			  <div class="col-md-offset-2 col-md-10"><h3>Admin Login Page</h3></div>
 		</div>
-		<form action="/admin/orders" method="post">
+		<form action="/admin/validate" method="post">
 			<div class="row">
 			 	<div class="col-md-offset-2 col-md-6">
 				    <label for="exampleInputEmail1">email:</label>

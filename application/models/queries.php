@@ -5,7 +5,7 @@ class queries extends CI_Model {
     public function checkuser()
     {
     	$users = $this->input->post();
-    	$query = 'Select count(*) as validID from users where email = ? and password = ?';
+    	$query = 'SELECT * FROM users WHERE email = ? AND password = ?';
     	return $this->db->query($query, $users)->row_array();
     }
     public function getdata()

@@ -81,8 +81,8 @@
 	 				<th>Total</th>
 	 				<th>Status</th>
 	 			</thead>	
-				<!-- foreach($products as $product)
-				{ -->
+				<?php foreach($products as $product)
+				{?>
 					<tr>
 						<td><a href='show/2'>dgagd</a></td>
 						<td>gadgaga</td>
@@ -99,7 +99,7 @@
 							</form>
 						</td>
 					</tr>
-			<!-- } -->
+			<?php } ?>
 			</table>
  		</div>
  		<div>
