@@ -25,11 +25,10 @@
 			  <div class="col-md-offset-2 col-md-10"><h3>Admin Login Page</h3></div>
 		</div>
 		<form action="/admin/orders" method="post">
-			<input type="hidden" name="login">
 			<div class="row">
 			 	<div class="col-md-offset-2 col-md-6">
 				    <label for="exampleInputEmail1">email:</label>
-				    <input type="email" class="form-control" id="exampleInputEmail1">
+				    <input type="email" class="form-control" name="email" required id="exampleInputEmail1">
 				</div>
 				<div class="col-md-4"></div>
 			</div>
@@ -37,7 +36,7 @@
 				<div class="col-md-offset-2 col-md-6">
 					
 					    <label for="exampleInputPassword1">Password:</label>
-					    <input type="password" class="form-control" id="exampleInputPassword1">
+					    <input type="password" title="Password must contain at least 4 characters, including UPPER/lowercase and numbers" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{4,}" name="password" onchange="form.pwd2.pattern = this.value;" class="form-control" id="exampleInputPassword1">
 				</div>
 				<div class="col-md-4"></div>
 			</div>

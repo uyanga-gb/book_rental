@@ -33,9 +33,20 @@ class products extends CI_Controller {
 	public function carts(){
 		$this->load->view('carts');
 	}
-	public function buy(){
-		// this is where we add the qty and id to the cart
-		$this->load->view('category');
+	public function buy($id){
+    	$cart = $this->session->userdata('cart');
+    	if(isset($cart[$id])) {
+    		$cart[$id] += intval($this->input->post('quantity'));
+    	}
+    	else {
+    		$cart[$id] = intval($this->input->post('quantity'));	
+    	}
+    	$total=$this->session->userdata('total');
+    	$this->session->set_userdata('total', $total+$this->input->post('quantity'));
+    	$this->session->set_userdata('cart',$cart);
+
+        $product['product'] = $this->items->get_all();
+		$this->load->view('category', $product);
 	}
 }
 ?>

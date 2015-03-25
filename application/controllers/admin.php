@@ -12,6 +12,15 @@ class admin extends CI_Controller {
 	{
 		$this->load->view('admin');
 	}
+	public function validate()
+	{
+		$valid = $this->queries->checkuser();
+		if ($valid > 0){
+			$this->orders();
+		} else {
+			redirect('/');
+		}
+	}
 	public function orders()
 	{
 		$this->load->view('dashboard/orders');
@@ -28,13 +37,6 @@ class admin extends CI_Controller {
 		$this->load->view('dashboard/products', array('list'=>$results));		
 	}
 	public function edit_product(){
-		$valid = $this->query->checkuser();
-		if ($valid == '1'){
-			$this->query->
-			$this->load->view('/edit_product');
-		} else {
-			$this->products();;
-		}
 	}
 	public function delete_product($id)
 	{
