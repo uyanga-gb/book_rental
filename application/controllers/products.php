@@ -5,12 +5,18 @@ class products extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
+		$this->load->model('models');
 	}
 
 	public function index()
 	{
-		$this->load->view('category');
+		$categories=$this->models->category();
+		$images=$this->models->get_images($category_id);
+		$this->load->view('category', array('categories'=>$categories, 'images'=>$images));
 	}
+
+
+	
 	public function show(){
 		$this->load->view('show');
 	}
