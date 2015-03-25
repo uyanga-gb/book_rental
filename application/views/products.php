@@ -1,4 +1,4 @@
-<?php require_once('admin_nav.php'); ?>
+<?php require_once('nav_bar.php'); ?>
 <html>
 	<head>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
@@ -10,7 +10,6 @@
 				position: absolute;
 				padding: 10px;
 			}	
-			body {padding-top: 60px;}
 			.left-addon input {	
 				padding-left: 30px;
 			}
@@ -20,23 +19,22 @@
 				font-weight: bold;
 				color: white;
 			}
+			.row {
+				margin-top: 30px;
+			}
 			.font12{font-size: 18px;}
 			.bottompad20{padding-bottom: 20px;}
-			.preview {
-				height: 100px;
-				width: 100px;
-			}
 		</style>
 	</head>
 	<body>
 		<div class='row'>
 			<div class='col-md-1'> </div>
 			<div class='col-md-10'>
-				<form class='form-inline' action='/admin/products_search/search' method='post'>
+				<form class='form-inline'>
 					<div class="row features col-md-12 bottompad20">						
 						<div class="inner-addon left-addon form-group">
 			  				<i class='glyphicon glyphicon-search'></i>
-			  				<input type="text" class="form-control" name='search' placeholder="search">
+			  				<input type="text" class="form-control" placeholder="search">
 			  			</div>
 						<input class='form-control pull-right blue' type='button' name='newproduct' value='Add New Product'>
 					</div>
@@ -51,16 +49,22 @@
 						<td>Action</td>
 					</tr>
 					<form>
-						<?php foreach($list as $key){ ?>
-							<tr>
-								<td><img class='preview' src="<?= $key['imagefile']?>" alt="<?= $key['imagefile']?>"></td>
-								<td><?= $key['id']?></td>
-								<td><?= $key['name']?></td>
-								<td><?= $key['inventory_count']?></td>
-								<td><?= $key['qrt_sold']?></td>
-								<td><a href='/admin/edit_product/<?= $key['id']?>'>Edit</a> <a class='padding10' href='/admin/delete_product/<?= $key['id']?>'>Delete</a></td>
-							</tr>	
-						<?php } ?>
+					<tr>
+						<td></td>
+						<td>1</td>
+						<td>T-shirt</td>
+						<td>20</td>
+						<td>100</td>
+						<td><a href='/edit_product'>Edit</a> <a class='padding10' href=''>Delete</a></td>
+					</tr>	
+					<tr>
+						<td></td>
+						<td>2</td>
+						<td>Coffee mugs</td>
+						<td>10</td>
+						<td>500</td>
+						<td><a href='/edit_product'>Edit</a> <a class='padding10' href=''>Delete</a></td>
+					</tr>	
 				</table>
 				<div>
 					<center class='font12'><a>1</a>|<a>2</a>|<a>3</a>|<a>4</a>|<a>5</a>|<a>6</a>|<a>7</a>|<a>></a><center>
