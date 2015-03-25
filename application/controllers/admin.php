@@ -5,6 +5,7 @@ class admin extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
+		$this->load->model('queries');
 	}
 
 	public function index()
@@ -16,15 +17,38 @@ class admin extends CI_Controller {
 		$this->load->view('dashboard/orders');
 	}
 	public function products(){
-		$this->load->view('dashboard/products');	
+		$results = $this->queries->getdata();
+		$this->load->view('dashboard/products', array('list'=>$results));	
+	}
+	public function products_search()
+	{
+		$search = $this->input->post('search');
+		$results = $this->queries->searchdata($search);
+		var_dump($results);die;
+		$this->load->view('dashboard/products', array('list'=>$results));		
 	}
 	public function edit_product(){
-		$this->load->view('/edit_product');
+		$valid = $this->query->checkuser();
+		if ($valid == '1'){
+			$this->query->
+			$this->load->view('/edit_product');
+		} else {
+			$this->products();;
+		}
 	}
-	public function show()
+	public function delete_product($id)
 	{
-		$this->load->view('show');
+			$this->queries->delete($id);
+			$this->products();
 	}
-	
+	public function show($id)
+	{
+		$this->load->view('/dashboard/show');
+	}
+	public function signin()
+	{
+		$this->session->sess_destroy();
+		$this->index();
+	}
 }
 ?>

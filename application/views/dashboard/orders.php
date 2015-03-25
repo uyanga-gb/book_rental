@@ -7,49 +7,52 @@
     <meta character="utf-8">
     <title></title>
    	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-     <style type="text/css">
+    <style type="text/css">
 	  body {
 			padding-top: 60px; 
 		}
-	input .form-group {
-		border-radius: 50px;
-	}
-	th {
-		height: 20px;
-		width: 100px;
-		border: collapse;
-		border: 2px solid black;
-	}
-	.address {
-		height: 20px;
-		width: 200px;
-	}
-	.inner-addon {
-		position: relative;
-	}
-	.inner-addon .glyphicon {
-		position: absolute;
-		padding: 10px;
-	}
-	.left-addon input {
-		padding-left: 30px;
-	}
-	.font12{
-		font-size: 18px;
-	}
-	a {
-		padding: 0 5px 0 5px; 
-	}
-	table {
-		margin: 5px 20px 5px 20px;
-	}
-	th {
-		background-color: rgb(197, 193, 193);
-	}
-	tr:nth-child(odd) {
-		background-color: rgb(216, 211, 211);
-	}
-  </style>
+		input .form-group {
+			border-radius: 50px;
+		}
+		th {
+			height: 20px;
+			width: 100px;
+			border: collapse;
+			border: 2px solid black;
+		}
+		.address {
+			height: 20px;
+			width: 200px;
+		}
+		.inner-addon {
+			position: relative;
+		}
+		.inner-addon .glyphicon {
+			position: absolute;
+			padding: 10px;
+		}
+		.left-addon input {
+			padding-left: 30px;
+		}
+		.font12{
+			font-size: 18px;
+		}
+		a {
+			padding: 0 5px 0 5px; 
+		}
+		table {
+			margin: 5px 20px 5px 20px;
+		}
+		th {
+			background-color: rgb(197, 193, 193);
+		}
+		tr:nth-child(odd) {
+			background-color: rgb(216, 211, 211);
+		}
+	</style>
+	<script type="text/javascript">
+	
+	</script>
 </head>
 <body>
  	<div class="container">
@@ -60,10 +63,10 @@
 	  					<input type="text" class="form-control" placeholder="search">
 	  				</div>
 				    <select class="form-control pull-right">
-					  <option>Show All</option>
-					  <option>Order in process</option>
-					  <option>Shipped</option>
-					  <option>Cancelled</option>
+					  <option value=''>Show All</option>
+					  <option value='1'>Order in process</option>
+					  <option value='2'>Shipped</option>
+					  <option value='3'>Cancelled</option>
 					</select>
 				  </div>
 			</form>
@@ -81,7 +84,7 @@
 				<!-- foreach($products as $product)
 				{ -->
 					<tr>
-						<td>dgagd</td>
+						<td><a href='show/2'>dgagd</a></td>
 						<td>gadgaga</td>
 						<td>gadgag</td>
 						<td>gagd</td>
@@ -89,9 +92,9 @@
 						<td>
 							<form>
 								<select class="form-control">
-						  		  <option>Order in process</option>
-								  <option>Shipped</option>
-								  <option>Cancelled</option>
+						  			<option value='1'>Order in process</option>
+									<option value='2' selected>Shipped</option>
+									<option value='3'>Cancelled</option>
 								</select>
 							</form>
 						</td>
