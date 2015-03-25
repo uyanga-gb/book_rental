@@ -55,7 +55,7 @@
 						<td>T-shirt</td>
 						<td>20</td>
 						<td>100</td>
-						<td><a href='/edit_product'>Edit</a> <a class='padding10' href=''>Delete</a></td>
+						<td><a href='/admin/edit_product'>Edit</a> <a class='padding10' href=''>Delete</a></td>
 					</tr>	
 					<tr>
 						<td></td>
@@ -63,7 +63,7 @@
 						<td>Coffee mugs</td>
 						<td>10</td>
 						<td>500</td>
-						<td><a href='/edit_product'>Edit</a> <a class='padding10' href=''>Delete</a></td>
+						<td><a href='/admin/edit_product'>Edit</a> <a class='padding10' href=''>Delete</a></td>
 					</tr>	
 				</table>
 				<div>

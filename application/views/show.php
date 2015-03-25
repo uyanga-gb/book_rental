@@ -49,7 +49,7 @@
 				</select>
 			</div>
 			<div class="col-md-2">
-				<form action="/products/buy" method="post">
+				<form action="/products/buy/<?= $key['id'] ?>" method="post">
 				<button class="btn btn-primary btn-xs">Buy</button>
 				</form>
 			</div>
