@@ -1,17 +1,9 @@
 <?php
 class models extends CI_Model {
-         // function get_all()
-     // {
-     //     return $this->db->query("SELECT * FROM products")->result_array();
-     //  }
-     // function get_product($id)
-     // {
-     //     $query=$this->db->query("SELECT * FROM products WHERE id = ?", array($id));
-     //      return $query->row(); 
-     // }
+
     public	function category()
     {
-		 $query=$this->db->query("SELECT count(*) as cat_count, category.category_id, category.category_name
+		$query=$this->db->query("SELECT count(*) as cat_count, category.category_id, category.category_name
         FROM product_list 
         left join category on product_list.category_id=category.category_id 
         group by category_id
@@ -20,18 +12,39 @@ class models extends CI_Model {
    	}	
     public function all_images()
     {
-        return ($this->db->query("SELECT *  FROM product_list
-        left join product_image on product_list.id=product_image.prod_id where product_image.main='y' or product_image.line=1")->result_array());
+        $query = "SELECT *,
+                (SELECT imageid 
+                    FROM product_image
+                    WHERE product_list.id=product_image.prod_id
+                    AND (product_image.main='y' OR product_image.line=1)
+                ) AS imageid
+                FROM product_list";
+        return $this->db->query($query)->result_array();
     }
     		
     public function get_images($category_id)
     {
-        $query="SELECT *
-        FROM product_list
-        left join product_image on product_list.id=product_image.prod_id
-        where product_list.category_id=? and (product_image.main='y' or product_image.line=1)";
+        $query = "SELECT *,
+                (SELECT imageid 
+                    FROM product_image
+                    WHERE product_list.id=product_image.prod_id
+                    AND (product_image.main='y' OR product_image.line=1)
+                ) AS imageid
+                FROM product_list
+                Where product_list.category_id=?";
       	return $this->db->query($query,$category_id)->result_array(); 	
     }
-
+    public function getProductID($productID)
+    {
+        $query = "SELECT *,
+                (SELECT imageid 
+                    FROM product_image
+                    WHERE product_list.id=product_image.prod_id
+                    AND (product_image.main='y' OR product_image.line=1)
+                ) AS imageid
+                FROM product_list
+                WHERE id = ?";
+        return $this->db->query($query,$productID)->row_array();
+    }
 }
 ?>

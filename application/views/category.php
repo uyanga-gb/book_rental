@@ -5,12 +5,6 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
 		<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
-		<script type="text/javascript">
-			$(document).on('click','img',function(res){
-					$(this).attr('alt').trigger('/');
-				});
-			});
-		</script>
 		<style rel='stylesheet'>
 			.container {
 				padding-top: 20px;
@@ -29,6 +23,7 @@
 				widows: 150px;
 				padding: 5px 4px 5px 4px;
 				display: inline-block;
+				text-align: center;
 			}
 			h4 {
 				display: inline-block;
@@ -68,16 +63,18 @@
 				</div>		
 			</div>
 			<div class='col-md-9 leftpad20'>
-				
 				<form class='form-inline padding-top: 10px;'>
+					<div class='row'>
 					<?php foreach ($images as $image) {?>
-
-						<div class="col-md-4 col-md-offset-1">
-						<img src="<?=$image['imageid']?>" alt="<?=$image['imageid']?>">
-						<h4><?=$image['name']?></h4>
+						<div class="col-md-3">
+						<a href="/products/show/<?=$image['id']?>">
+							<img src="<?=$image['imageid']?>" alt="<?=$image['imageid']?>">
+						</a>
+						<h4><?=$image['name']?></h4><br>
 						<p><?=$image['price']?></p>
 						</div>
 					<?php }?>
+				</div>
 				</form>
 				<div>
 					<center class='font12 col-md-12'><a>1</a>|<a>2</a>|<a>3</a>|<a>4</a>|<a>5</a>|<a>6</a>|<a>7</a>|<a>></a><center>

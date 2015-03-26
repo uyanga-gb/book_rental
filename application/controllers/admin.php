@@ -55,7 +55,12 @@ class admin extends CI_Controller {
 	public function delete_product($id)
 	{
 			$this->queries->delete($id);
-			$this->products();
+			redirect('/products');
+	}
+	public function update($id)
+	{
+			$this->queries->updateProduct($id);
+			redirect('/products');
 	}
 	public function show($id)
 	{

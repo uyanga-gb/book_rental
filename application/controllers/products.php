@@ -25,10 +25,9 @@ class products extends CI_Controller {
 		// $this->load->view('category', $images);
 		
 	}
-
-	
-	public function show(){
-		$this->load->view('show');
+	public function show($productID){
+		$productDetails = $this->models->getProductID($productID);
+		$this->load->view('show',array('productID'=>$productDetails));
 	}
 	public function carts(){
 		$this->load->view('carts');
