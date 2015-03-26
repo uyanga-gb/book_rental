@@ -59,25 +59,25 @@
 		<form action="#" method="post">
 			<table>
 				<td><p>First Name:</p></td>
-				<td><input class="field" type="text" name="first_name"></td>
+				<td><input class="field" type="text" name="first_name" required></td>
 				<tr></tr>
 				<td><p>Last Name:</p></td>
-				<td><input class="field" type="text" name="last_name"></td>
+				<td><input class="field" type="text" name="last_name" required></td>
 				<tr></tr>
 				<td><p>Address:</p></td>
-				<td><input class="field" type="text" name="address"></td>
+				<td><input class="field" type="text" name="address" required></td>
 				<tr></tr>
 				<td><p>Address 2:</p></td>
 				<td><input class="field" type="text" name="address2"></td>
 				<tr></tr>
 				<td><p>City:</p></td>
-				<td><input class="field" type="text" name="city"></td>
+				<td><input class="field" type="text" name="city" required></td>
 				<tr></tr>
 				<td><p>State:</p></td>
-				<td><input class="field" type="text" min="2" name="state"></td>
+				<td><input class="field" type="text" min="2" name="state" required></td>
 				<tr></tr>
 				<td><p>Zipcode:</p></td>
-				<td><input class="field" type="text" name="zip"></td>
+				<td><input class="field" type="text" name="zip" required></td>
 			</table>
 		</form>
 		<h1>Billing Information</h1>
@@ -85,25 +85,25 @@
 		<input type="checkbox" name="same_shipping"> Same as Shipping
 			<table>
 				<td><p>First Name:</p></td>
-				<td><input class="field" type="text" name="first_name"></td>
+				<td><input class="field" type="text" name="first_name" required></td>
 				<tr></tr>
 				<td><p>Last Name:</p></td>
-				<td><input class="field" type="text" name="last_name"></td>
+				<td><input class="field" type="text" name="last_name" required></td>
 				<tr></tr>
 				<td><p>Address:</p></td>
-				<td><input class="field" type="text" name="address"></td>
+				<td><input class="field" type="text" name="address" required></td>
 				<tr></tr>
 				<td><p>Address 2:</p></td>
 				<td><input class="field" type="text" name="address2"></td>
 				<tr></tr>
 				<td><p>City:</p></td>
-				<td><input class="field" type="text" name="city"></td>
+				<td><input class="field" type="text" name="city" required></td>
 				<tr></tr>
 				<td><p>State:</p></td>
-				<td><input class="field" type="text" min="2" name="state"></td>
+				<td><input class="field" type="text" min="2" name="state" required></td>
 				<tr></tr>
 				<td><p>Zipcode:</p></td>
-				<td><input class="field" type="text" name="zip"></td>
+				<td><input class="field" type="text" name="zip" required></td>
 			</table>
 			<br>
 			<div id="card">

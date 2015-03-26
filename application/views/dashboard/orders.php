@@ -34,9 +34,6 @@
 		.left-addon input {
 			padding-left: 30px;
 		}
-		.font12{
-			font-size: 18px;
-		}
 		a {
 			padding: 0 5px 0 5px; 
 		}
@@ -81,8 +78,8 @@
 	 				<th>Total</th>
 	 				<th>Status</th>
 	 			</thead>	
-				<?php foreach($products as $product)
-				{?>
+				<!--- <?php foreach($products as $product)
+				{?> -->
 					<tr>
 						<td><a href='show/2'>dgagd</a></td>
 						<td>gadgaga</td>
@@ -103,7 +100,7 @@
 			</table>
  		</div>
  		<div>
-            <center class='font12'><a>1</a>|<a>2</a>|<a>3</a>|<a>4</a>|<a>5</a>|<a>6</a>|<a>7</a>|<a>></a><center>
+            <center style='font-size: 18px'><a>1</a>|<a>2</a>|<a>3</a>|<a>4</a>|<a>5</a>|<a>6</a>|<a>7</a>|<a>></a><center>
         </div>
  	</div>
  

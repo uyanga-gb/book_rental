@@ -18,7 +18,6 @@
 		border: 2px
 	}
 	.error {
-		margin: 0 auto;
 		color: red;
 		font-style: italic;
 	}

@@ -20,7 +20,6 @@
 				font-weight: bold;
 				color: white;
 			}
-			.font12{font-size: 18px;}
 			.bottompad20{padding-bottom: 20px;}
 			.preview {
 				height: 100px;
@@ -63,7 +62,7 @@
 						<?php } ?>
 				</table>
 				<div>
-					<center class='font12'><a>1</a>|<a>2</a>|<a>3</a>|<a>4</a>|<a>5</a>|<a>6</a>|<a>7</a>|<a>></a><center>
+					<center style='font-size: 18px'><a>1</a>|<a>2</a>|<a>3</a>|<a>4</a>|<a>5</a>|<a>6</a>|<a>7</a>|<a>></a><center>
 				</div>
 				</form>
 			</div>
