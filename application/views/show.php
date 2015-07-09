@@ -8,52 +8,70 @@
     <title>Show Product : <?=$productID['name']?></title>
    	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
    	<style type="text/css">
+	  body {
+	  	background-color: #C5BAA2;
+	  }
 	  .container {
-	  	padding-top: 10px;
+	  	padding-top: 100px;
 	  }
 	  .big {
-	  	height: 150px;
-	  	width: 150px;
+	  	height: 100%;
+	  	width: 100%;
+	  }
+	  .col-xs-6 {
+	  	margin-top: 20px;
 	  }
 	  .small {
-	  	height: 52px;
-	  	width: 52px;
 	  	display: inline-block;
 	  	margin-top: 5px;
   		}
   		textarea{
-  			height: 200px;
-  			width: 600px;
-  			resize: none;
+  			min-height: 180px;
+  			width: 450px;
+  			/*resize: none;*/
   			border: 0px;
+  			border-radius: 3px;
+  			opacity: 0.6;
+  			margin: 5px 10px 40px 5px;
+  			padding: 10px;
+  			color: #737373;
   		}
+  		h4 {
+  			color: #fff;
+  		}
+  		a {
+  			color: #DDE0C3;
+  		}
+  		
   </style>
 </head>
 <body>
  	<div class="container">
  		<a href="/products">Go Back</a>
  		<div class='row'>
- 			<div class='col-md-2 col-md-offset-2'>
- 				<img class='big'src="<?=$productID['imageid']?>" alt = "<?=$productID['imageid']?>">
+ 			<div class='col-xs-6'>
+ 				<img class='big thumbnail'src="<?=$productID['imageid']?>" alt = "<?=$productID['imageid']?>">
  			</div>
-	 		<div class="col-md-7">
+	 		<div class="col-xs-6">
 	 			<h4><?=$productID['name']?></h4>
 	 			<textarea><?=$productID['description']?></textarea>
-	 		</div>
-	 	</div>
- 		<div class="row container">
- 			<form action="/products/buy/<?=$productID['id']?>" method="post">
- 				<div class="col-md-2 col-md-offset-8 text-right">
- 					<select name="quantity">
-						<?php for($i=1; $i<10; $i++) : ?>
-						<option value="<?= $i; ?>"><?= $i.'   ($'.$i*$productID['price'].')'; ?>
-						</option>
-						<?php endfor; ?>
-					</select>
-					<button class="btn btn-primary btn-xs">Buy</button>
+ 				<form class="form-group" action="/products/buy/<?=$productID['id']?>" method="post">
+ 				<div class="row">
+ 					<div class="col-xs-4 text-right">
+	 					<select class="form-control" name="quantity">
+							<?php for($i=1; $i<10; $i++) : ?>
+							<option value="<?= $i; ?>"><?= $i.'   ($'.$i*$productID['price'].')'; ?>
+							</option>
+							<?php endfor; ?>
+						</select>
+					</div>
+					<div class="col-xs-2">
+						<button class="btn btn-primary btn-small">Buy</button>
+					</div>
 				</div>
-			</form>
-		</div>
+				</form>
+			</div>
+	 	</div>
  	</div>
 </body>
 </html>

@@ -1,10 +1,14 @@
-<?php require_once('nav_bar.php'); ?>
+
 <html>
 	<head>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+		<link href="assets/css/font-awesome.min.css" rel="stylesheet">
 		<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
 		<style rel='stylesheet'>
+			.container {
+				margin-top: 180px;
+			}
 			.inner-addon {	position: relative; }	
 			.inner-addon .glyphicon {	
 				position: absolute;
@@ -27,9 +31,10 @@
 		</style>
 	</head>
 	<body>
+	<div class="container">
 		<div class='row'>
-			<div class='col-md-1'> </div>
-			<div class='col-md-10'>
+			<div class='col-xs-1'></div>
+			<div class='col-xs-10'>
 				<form class='form-inline'>
 					<div class="row features col-md-12 bottompad20">						
 						<div class="inner-addon left-addon form-group">
@@ -67,10 +72,11 @@
 					</tr>	
 				</table>
 				<div>
-					<center class='font12'><a>1</a>|<a>2</a>|<a>3</a>|<a>4</a>|<a>5</a>|<a>6</a>|<a>7</a>|<a>></a><center>
+					<center class='font12'><a>1</a>|<a>2</a>|<a>3</a>|<a>4</a>|<a>5</a>|<a>6</a>|<a>7</a>|<a>></a></center>
 				</div>
 				</form>
 			</div>
 		</div>
+	</div>
 	</body>
 </html>

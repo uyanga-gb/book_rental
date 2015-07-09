@@ -1,4 +1,4 @@
-<?php    require('nav_bar.php');    ?>
+<?php    require('nav_bar.php');    ?> 
 
 <html>
 <head>
@@ -9,11 +9,27 @@
 	<script>
 	</script>
     <style>
+    body {
+    	background-image: url("https://s3-us-west-2.amazonaws.com/bookrental/grey3.jpg");
+		background-repeat: no-repeat;
+		background-size: cover;
+    }
+    .container {
+    	margin-top: 100px;
+    	
+    }
+    h1 {
+    	color: #737373;
+    }
     	table {
     		margin-top: 50px;
     	}
     	thead {
     		background-color: rgb(197, 193, 193);
+    		color: #737373;
+    	}
+    	td {
+    		color: #fff;
     	}
     	.field {
     		width: 250px;
@@ -21,10 +37,33 @@
     	p {
     		text-align: right;
     		margin-left: 20px;
+    		color: #737373;
+    		margin-right: 10px;
+    	}
+    	.glyphicon {
+    		padding-left: 15px;
+    		color: red;
+    	}
+    	.pull-right {
+    		color: #fff;
+    		font-weight: bold;
+    		font-size: 18px;
     	}
     	#card {
     		margin-left: 150px;
     	}
+    	.btn {
+    		color: #DDE0C3;
+    		background-color: transparent;
+    		border-radius: 3px;
+    		border-color: #fff;
+    		margin-top: 30px;
+    	}
+    	input {
+    		opacity: 0.5;
+    		color: black;
+    	}
+
     </style>
 </head>
 <body>
@@ -38,25 +77,27 @@
 					<th>Total</th>
 				</thead>
 				<tbody>
-					<tr></tr>
-					<td>Black Belt for Staff</td>
-					<td>$19.99</td>
-					<td>1 <a href="#">update</a><span class="glyphicon glyphicon-trash inner-addon right-addon" /></td>
-					<td>$19.99</td>
-					<tr></tr>
-					<td>CodingDojo Cups</td>
-					<td>$9.99</td>
-					<td>3 <a href="#">update</a><span class="glyphicon glyphicon-trash inner-addon right-addon" /></td>
-					<td>$29.97</td>
+				<?php	
+				$total = 0;	
+					foreach ($cart_items as $item)
+						 {?>
+							<tr>
+								<td><?=$item['name']?></td>
+								<td><?=$item['price']?></td>
+								<td><?=$item['quantity']?> <a href="/products/remove/<?=$item['id']?>"><span class="glyphicon glyphicon-trash inner-addon right-addon" /></a></td>
+								<td>$<?=$item['total']?></td>
+								<?php $total += $item['total'];	?>
+							</tr>
+						<?php }	?>				
 				</tbody>
 			</table>
-			<p class="pull-right">Total: $49.96</p><br><br>
-			<a href='/products/index'><input class="pull-right" type="button" name="continue" value="Continue Shopping" /></a>
+			<p class="pull-right">Total: $<?=$total?></p><br><br>
+			<a href='/products/index'><input class="btn pull-right" type="button" name="continue" value="Continue Shopping" /></a>
 		</form>
 	</div>
 	<div class="container">
 		<h1>Shipping Information</h1>
-		<form action="#" method="post">
+		<form action="/products/shipping" method="post">
 			<table>
 				<td><p>First Name:</p></td>
 				<td><input class="field" type="text" name="first_name" required></td>
@@ -79,10 +120,11 @@
 				<td><p>Zipcode:</p></td>
 				<td><input class="field" type="text" name="zip" required></td>
 			</table>
-		</form>
-		<h1>Billing Information</h1>
-		<form action="#" method="post">
-		<input type="checkbox" name="same_shipping"> Same as Shipping
+			<h1>Billing Information</h1>
+			<!-- <form action="/products/shipping" method="post"> -->
+				
+		
+		
 			<table>
 				<td><p>First Name:</p></td>
 				<td><input class="field" type="text" name="first_name" required></td>

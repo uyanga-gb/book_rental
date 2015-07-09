@@ -1,26 +1,52 @@
 <html>
 <head>
-	<title>Ecommerce Project of David Lee, Uyanga Ganbaatar and Edwin Banzuelo</title>
+	<title>Rent your textbook on Bargain Books</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<link href="assets/css/font-awesome.min.css" rel="stylesheet">
 	<style>
-	nav {
+	
+	.navbar {
 		color: white;
+		clear: none;
 	}
-	li {
+	.nav h3 {
+		font-family: calibri-bold,Tahoma,Arial;
+		margin-left: 30px;
+		color: #fff;
+
+	}
+	.nav h6 {
+		font-size: 14px;
+		font-family: calibri-bold;
+		color: #DDE0C3;
+		text-shadow: 1px 1px #777;
+		font-family: calibri-regular,Tahoma,Arial;
+		margin-left: 30px;
+	}
+	li a {
 		margin-right: 30px;
+		color: white;
+		font-family: calibri-bold,Tahoma,Arial;
 	}
 
 	</style>
 </head>
 
 <body>
-<nav class="nav navbar-inverse" role="navigation" id="nav">
-	<div class="nav navbar-collapse collapse navbar-nav navbar-left"><h3>Dojo eCommerce</h3></div>
-		 <ul class="nav navbar-nav navbar-right">
-			<li><a href="/products/carts">Shopping Cart (5)</a></li>
-		</ul>
+<div class="navbar navbar-fixed-top">
+	<div class="nav navbar-collapse collapse navbar-nav navbar-left"><a href="/products/index"><h3>BARGAIN BOOKS</h3></a>
+			<h6>Affordable Education for Everyone</h6>
 	</div>
-
-</nav>
+		 <ul class="nav navbar-nav navbar-right">
+				<li><a href="/admin">MY ACCOUNT</a></li>
+			<?php if(empty($this->session->userdata('total')))
+				{?>
+				<li><a href="/products/carts">SHOPPING CART (0)</a></li>
+			<?php } 
+				else { ?>
+					<li><a href="/products/carts">Shopping Cart (<?=$this->session->userdata('total');?>)</a></li>
+			<?php } ?>
+		</ul>
+</div>
 </body>
 </html>
