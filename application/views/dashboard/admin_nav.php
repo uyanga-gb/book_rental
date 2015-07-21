@@ -54,7 +54,9 @@
 				</ul>
 			</div>
 		</div>
-		<h3>Congratulations! You can simply enter your book details on "Products" section, and it will be immediataly available on the board.</h3>
-		<h4>You can check your book order details on "Orders" section.</h4>
+		<div class="col-md-12 col-sm-12 col-xs-12">
+			<h3>Congratulations! You can simply enter your book details on "Products" section, and it will be immediataly available on the board.</h3>
+			<h4>You can check your book order details on "Orders" section.</h4>
+		</div>
  </body>
  </html>

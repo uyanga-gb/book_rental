@@ -64,6 +64,7 @@ class products extends CI_Controller {
 		$items=$this->session->userdata('cart');
 		$cart_items=array();
 		$total=0;
+		if(!empty($this->session->userdata('cart'))) {
 		foreach ($items as $key => $value) {
 			$product=$this->models->getProductID($key);
 			$quantity=$value;
@@ -73,7 +74,10 @@ class products extends CI_Controller {
 		}
 		
 		$this->load->view('carts', array('cart_items'=>$cart_items));
-	
+		}
+		else {
+			$this->load->view('carts', array('cart_items'=>$cart_items));
+		}
 	}
 	public function remove($id) {
 		$cart_items = $this->session->userdata('cart');

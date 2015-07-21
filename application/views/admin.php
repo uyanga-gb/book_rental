@@ -74,6 +74,16 @@
 				</form>
 			</div>
 			<div class="col-xs-5">
+		          <?php if($this->session->flashdata('reg_err'))
+		                {
+		          $message=$this->session->flashdata('reg_err');?>
+		           <p style="color: red;"><?= $message?></p>
+		         <?php  } 
+		              if($this->session->flashdata('success'))
+		              {
+		                $success=$this->session->flashdata('success');?>
+		           <p style="color:green;"><?= $success['message']?></p>
+		            <?php  }?>
 				<div class="col-xs-12"><h3>Register</h3></div>
 				<form action="/admin/register" method="post">
 				 	<div class=" col-xs-12">
@@ -90,16 +100,6 @@
 					</div>
 					<div class="col-xs-2"><button type="submit" name="button" class="btn btn-sm">REGISTER</button></div>
 				</form>			
-		          <?php if($this->session->flashdata('reg_err'))
-		                {
-		          $message=$this->session->flashdata('reg_err');?>
-		           <p><?= $message?></p>
-		         <?php  } 
-		              if($this->session->flashdata('success'))
-		              {
-		                $success=$this->session->flashdata('success');?>
-		           <p style="color:green;"><?= $success['message']?></p>
-		            <?php  }?>
 		  	</div>	
 		  	<div class="col-xs-3"></div>	
 		</div>	
