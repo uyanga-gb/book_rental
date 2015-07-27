@@ -14,8 +14,8 @@
 	  .container {
 	  	padding-top: 100px;
 	  }
-	  .big {
-	  	height: 100%;
+	  .thumbnail {
+	  	height: auto;
 	  	width: 100%;
 	  }
 	  .col-xs-6 {
@@ -49,7 +49,7 @@
  	<div class="container">
  		<a href="/products">Go Back</a>
  		<div class='row'>
- 			<div class='col-xs-6'>
+ 			<div class='col-xs-6 col-sm-6'>
  				<img class='thumbnail'src="<?=$productID['imageid']?>" alt = "<?=$productID['imageid']?>">
  			</div>
 	 		<div class="col-xs-6">
