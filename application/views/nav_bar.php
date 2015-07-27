@@ -34,14 +34,14 @@
 
 <body>
 <div class="navbar navbar-fixed-top">
-	<div class="nav navbar-collapse collapse navbar-nav navbar-left"><a href="/products/index"><h3>BARGAIN BOOKS</h3></a>
+	<div class="nav navbar-nav navbar-left"><a href="/products/index"><h3>BARGAIN BOOKS</h3></a>
 			<h6>Affordable Education for Everyone</h6>
 	</div>
 		 <ul class="nav navbar-nav navbar-right">
-				<li><a href="/admin">MY ACCOUNT</a></li>
+				<li class="pull-right"><a href="/admin">MY ACCOUNT</a></li>
 			<?php if(empty($this->session->userdata('total')))
 				{?>
-				<li><a href="/products/carts">SHOPPING CART (0)</a></li>
+				<li class="pull-right"><a href="/products/carts">SHOPPING CART (0)</a></li>
 			<?php } 
 				else { ?>
 					<li><a href="/products/carts">Shopping Cart (<?=$this->session->userdata('total');?>)</a></li>

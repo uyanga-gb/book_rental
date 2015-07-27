@@ -5,19 +5,9 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
 		<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
-		<script>
-			// $("#link").click(function(){
-   // 			 $.get('xmldata.php',function(d){
- 	 //       $('#xmlData').html(d);
-			//     });
-			// });
-		</script>
 		<style rel='stylesheet'>
 			body {
-				/*background: 
-				url("https://s3-us-west-2.amazonaws.com/bookrental/background1.jpg") no-repeat top fixed,
-				url("https://s3-us-west-2.amazonaws.com/bookrental/paper_background.png") 300px 10px no-repeat;*/
-				
+							
 				background: url("https://s3-us-west-2.amazonaws.com/bookrental/background1.jpg") top no-repeat, url("https://s3-us-west-2.amazonaws.com/bookrental/dashboard_bck3.jpg") bottom repeat-y;
 				background-size: 100%;
 				margin: 0 auto;
@@ -178,7 +168,7 @@
 			</form>
 		  	<div class="col-xs-7"></div>
 		</div>
-		<h4 id="text">Rent books to save or Earn by leasing your books for others.</h4>
+		<h4 id="text">Rent books to save or earn by leasing your books for others.</h4>
 		<h5 id="text2">Please register to lease your book.</h5>
 		<div id="category" class="col-xs-12 category">	
 			<label>Choose by Categories</label></br>
@@ -205,16 +195,17 @@
 			<div class="col-xs-1">
 			</div>
 		</div>
+		<div class="row">
 				<?php	
 				foreach ($images as $image) {?>
-		<div id="book_frame">
+		<div class="col-md-6 col-sm-6 col-xs-12" >
 					<a href="/products/show/<?=$image['id']?>"><img src="<?=$image['imagefile']?>" alt="<?=$image['imagefile']?>"></a>
 					<h5><?=$image['name']?></h5>
 					<p>Rent at $<?=$image['price']?></p>
 		</div>
 		
 				<?php }?>
-			
+		</div>	
 		<!-- <div>
 			<center class='font12 col-md-12'><a>1</a>|<a>2</a>|<a>3</a>|<a>4</a>|<a>5</a>|<a>6</a>|<a>7</a>|<a>></a><center>
 		</div> -->

@@ -102,7 +102,8 @@
 				</form>			
 		  	</div>	
 		  	<div class="col-xs-3"></div>	
-		</div>	
+		</div>
+		<p style="margin-top:30px; color: yellow;">If you want to see how typical book leasing account looks like, you could log in using "email: yepee@yahoo.com; password: Testing12" </p>	
 	</div>
  </body>
  </html>

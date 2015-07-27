@@ -46,11 +46,11 @@
 
   		<div class="navbar navbar-fixed-top">
        		<div class="container">
-	       		<ul class="nav">
-		       		<li><a class="navbar-brand" href="/admin/orders/<?=$user['validID']?>">Dashboard</a></li>
-				    <li><a class="nav navbar-nav" href="/admin/orders/<?=$user['validID']?>">Orders</a></li>
-				    <li><a class="nav navbar-nav" href="/admin/products/<?=$user['validID']?>">Products</a></li>
-			    	<li><a class="nav navbar-nav pull-right" href="/admin/signin">Log off (your ID: <?=$user['validID']?>)</a></li>
+	       		<ul class="nav list-inline">
+		       		<li><a class="navbar-brand col-sm-3 col-xs-12" href="/admin/orders/<?=$user['validID']?>">Dashboard</a></li>
+				    <li><a class="nav navbar-nav col-sm-3 col-xs-4" href="/admin/orders/<?=$user['validID']?>">Orders</a></li>
+				    <li><a class="nav navbar-nav col-sm-3 col-xs-4"  href="/admin/products/<?=$user['validID']?>">Products</a></li>
+			    	<li><a class="nav navbar-nav col-sm-3 col-xs-4" href="/admin/signin">Log off (your ID: <?=$user['validID']?>)</a></li>
 				</ul>
 			</div>
 		</div>
