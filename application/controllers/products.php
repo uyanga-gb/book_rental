@@ -31,7 +31,9 @@ class products extends CI_Controller {
 	{
 		$search = $this->input->post('search');
 		$results = $this->queries->searchdata($search);
+		$categories=$this->models->category();
 		// var_dump($results);die;
+
 		$this->load->view('/category', array('categories'=>$categories,'images'=>$results));		
 	}
 	public function show($productID){

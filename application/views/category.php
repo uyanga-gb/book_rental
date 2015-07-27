@@ -45,9 +45,11 @@
 				margin-top: 10px;
 			}
 			h5 {
+				height: 38px;
 				display: block;
 				color: #fff;
 				font-family: calibri-bold, Tahoma,Arial;
+
 			}
 			p {
 				display: block;
@@ -137,7 +139,7 @@
 				height: 150px auto;
 				border-radius: 10px;
 				color: white;
-				margin-bottom: 220px;
+				margin-bottom: 180px;
 			}
 			.category label {
 				font-size: 18px;

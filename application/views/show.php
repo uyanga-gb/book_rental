@@ -50,7 +50,7 @@
  		<a href="/products">Go Back</a>
  		<div class='row'>
  			<div class='col-xs-6'>
- 				<img class='big thumbnail'src="<?=$productID['imageid']?>" alt = "<?=$productID['imageid']?>">
+ 				<img class='thumbnail'src="<?=$productID['imageid']?>" alt = "<?=$productID['imageid']?>">
  			</div>
 	 		<div class="col-xs-6">
 	 			<h4><?=$productID['name']?></h4>
